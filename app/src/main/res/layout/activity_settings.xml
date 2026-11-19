@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <Button
+            android:id="@+id/backButton"
+            style="@style/SecondaryButton"
+            android:text="@string/back" />
+
+        <Button
+            android:id="@+id/menuDisplayButton"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/card_bg"
+            android:text="@string/menu_display"
+            android:textColor="#FFFFFFFF"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="4dp"
+            android:alpha="0.55"
+            android:text="@string/menu_display_desc"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/menuRecordButton"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/card_bg"
+            android:text="@string/menu_record"
+            android:textColor="#FFFFFFFF"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="4dp"
+            android:alpha="0.55"
+            android:text="@string/menu_record_desc"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/menuAlarmButton"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/card_bg"
+            android:text="@string/menu_alarm"
+            android:textColor="#FFFFFFFF"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="4dp"
+            android:alpha="0.55"
+            android:text="@string/menu_alarm_desc"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/menuSystemButton"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/card_bg"
+            android:text="@string/menu_system"
+            android:textColor="#FFFFFFFF"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="4dp"
+            android:alpha="0.55"
+            android:text="@string/menu_system_desc"
+            android:textSize="12sp" />
+    </LinearLayout>
+</ScrollView>

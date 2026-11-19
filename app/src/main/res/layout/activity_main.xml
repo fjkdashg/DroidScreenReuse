@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <com.droidscreentimer.FlowingBackgroundView
+        android:id="@+id/backgroundView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/infoGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/info_bg"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/timeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:includeFontPadding="false"
+            android:text="--:--"
+            android:textColor="#FFFFFFFF"
+            android:textSize="76sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/gregorianText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="----年--月--日"
+            android:textColor="#E6FFFFFF"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/lunarText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="农历--月--"
+            android:textColor="#E6FFFFFF"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="180dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="14dp"
+            android:background="#33FFFFFF" />
+
+        <TextView
+            android:id="@+id/weatherTodayText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="今天  --"
+            android:textColor="#E6FFFFFF"
+            android:textSize="19sp" />
+
+        <TextView
+            android:id="@+id/weatherTomorrowText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="明天  --"
+            android:textColor="#E6FFFFFF"
+            android:textSize="19sp" />
+    </LinearLayout>
+</FrameLayout>

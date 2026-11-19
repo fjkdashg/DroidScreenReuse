@@ -1,0 +1,41 @@
+<resources>
+    <string-array name="camera_facing">
+        <item>后置摄像头</item>
+        <item>前置摄像头</item>
+    </string-array>
+
+    <string-array name="record_orientations">
+        <item>0 度</item>
+        <item>90 度</item>
+        <item>180 度</item>
+        <item>270 度</item>
+    </string-array>
+
+    <string-array name="record_durations">
+        <item>1 分钟</item>
+        <item>3 分钟</item>
+        <item>5 分钟</item>
+        <item>10 分钟</item>
+    </string-array>
+
+    <string-array name="record_resolutions">
+        <item>320x240</item>
+        <item>640x480</item>
+        <item>1280x720</item>
+        <item>1920x1080</item>
+    </string-array>
+
+    <string-array name="record_fps">
+        <item>15</item>
+        <item>24</item>
+        <item>30</item>
+        <item>60</item>
+    </string-array>
+
+    <string-array name="record_bitrates">
+        <item>1</item>
+        <item>2</item>
+        <item>4</item>
+        <item>8</item>
+    </string-array>
+</resources>

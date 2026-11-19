@@ -1,0 +1,19 @@
+# 本地工具链（Gradle / JDK 及下载压缩包）
+.tools/
+
+# Gradle 构建缓存
+.gradle/
+
+# 构建产物
+build/
+*.apk
+
+# 本机环境配置（SDK 路径等）
+local.properties
+
+# 归档 / 临时下载文件
+*.zip
+
+# IDE 配置
+.idea/
+*.iml

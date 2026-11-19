@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">DroidScreenTimer</string>
+    <string name="settings_title">设置</string>
+    <string name="menu_display">信息显示</string>
+    <string name="menu_display_desc">时间制式、开机自启、重力翻转、天气定位</string>
+    <string name="menu_record">录像设置</string>
+    <string name="menu_record_desc">启用录像、参数、单文件时长、保存路径</string>
+    <string name="menu_alarm">闹钟设置</string>
+    <string name="menu_alarm_desc">闹钟时间、重复、随机音乐</string>
+    <string name="menu_system">系统</string>
+    <string name="menu_system_desc">调试服务器等开发选项</string>
+    <string name="debug_server_enable">启用调试服务器（HTTP）</string>
+    <string name="debug_server_hint">接口：/status 应用与录像状态、/camera 相机与编码器诊断、/log 设备日志（可加 ?pid=1 只看本进程）</string>
+    <string name="record_segment">单文件时长</string>
+    <string name="record_orientation">保存画面角度</string>
+    <string name="record_camera">摄像头</string>
+    <string name="record_preview">保存预览（仅调试）</string>
+    <string name="record_preview_hint">正在初始化预览…</string>
+    <string name="stream_server_enable">流媒体服务（局域网实时画面）</string>
+    <string name="stream_server_hint">局域网内其他设备可通过浏览器实时查看摄像头画面；点击上方地址可直接打开观看页</string>
+    <string name="record_notification">后台录像进行中</string>
+
+    <string name="time_label">时间显示</string>
+    <string name="time_format_24">24 小时制（关闭后为 12 小时制，均不显示秒与 AM/PM）</string>
+    <string name="boot_label">开机自动启动</string>
+    <string name="flip_label">随重力感应翻转</string>
+
+    <string name="weather_label">天气</string>
+    <string name="weather_auto_location">自动定位</string>
+    <string name="weather_lat">纬度</string>
+    <string name="weather_lon">经度</string>
+    <string name="weather_loading">天气获取中…</string>
+    <string name="weather_unavailable">天气暂不可用</string>
+
+    <string name="record_label">前置摄像头录像</string>
+    <string name="record_enable">启用录像（打开程序即开始录像）</string>
+    <string name="record_resolution">分辨率</string>
+    <string name="record_fps">帧率</string>
+    <string name="record_bitrate">码率 (Mbps)</string>
+    <string name="record_audio">同时录制声音</string>
+    <string name="record_save_path">录像保存路径</string>
+    <string name="record_default_path">默认：公共目录 Movies/DroidScreenTimer（相册可见）</string>
+    <string name="record_choose_folder">选择保存文件夹</string>
+    <string name="record_reset_folder">恢复默认</string>
+
+    <string name="alarm_label">闹钟</string>
+    <string name="alarm_list_title">我的闹钟</string>
+    <string name="alarm_add">＋ 添加闹钟</string>
+    <string name="alarm_empty">还没有闹钟，点击下方按钮添加</string>
+    <string name="alarm_delete">删除</string>
+    <string name="alarm_repeat_days">每周生效日（不选则仅响一次）</string>
+    <string name="alarm_skip_holidays">公休日不响铃（法定节假日及周末）</string>
+    <string name="holiday_data_note">节假日数据内置 2025–2027 年，数据外日期按周末判断，以国务院公告为准</string>
+    <string name="alarm_music_hint">响铃音乐：从下方文件夹中随机播放音频</string>
+    <string name="week_mon">一</string>
+    <string name="week_tue">二</string>
+    <string name="week_wed">三</string>
+    <string name="week_thu">四</string>
+    <string name="week_fri">五</string>
+    <string name="week_sat">六</string>
+    <string name="week_sun">日</string>
+    <string name="alarm_time">闹钟时间</string>
+    <string name="alarm_folder">音乐文件夹（随机播放其中音频）</string>
+    <string name="alarm_choose_folder">选择文件夹</string>
+    <string name="alarm_test">试响一次</string>
+    <string name="alarm_folder_hint">未设置时使用系统默认闹铃</string>
+
+    <string name="save">保存并返回</string>
+    <string name="save_only">保存</string>
+    <string name="back">返回</string>
+    <string name="triple_tip">快速连续点击屏幕三次可打开设置</string>
+    <string name="saved">已保存</string>
+    <string name="need_camera_permission">需要授予相机权限才能录像</string>
+    <string name="need_location_permission">需要授予定位权限才能自动定位</string>
+    <string name="low_battery">电量低于 5%%，已允许息屏</string>
+</resources>

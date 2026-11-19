@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/backButton"
+                style="@style/SecondaryButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/back" />
+
+            <Button
+                android:id="@+id/saveOnlyButton"
+                style="@style/SecondaryButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="8dp"
+                android:text="@string/save_only" />
+
+            <Button
+                android:id="@+id/saveButton"
+                style="@style/AccentButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="8dp"
+                android:text="@string/save" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/Card">
+
+            <Switch
+                android:id="@+id/recordSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/record_enable" />
+
+            <TextView
+                style="@style/FieldLabel"
+                android:layout_marginTop="12dp"
+                android:text="@string/record_camera" />
+
+            <Spinner
+                android:id="@+id/facingSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/camera_facing" />
+
+            <TextView
+                style="@style/FieldLabel"
+                android:layout_marginTop="12dp"
+                android:text="@string/record_resolution" />
+
+            <Spinner
+                android:id="@+id/resolutionSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/record_resolutions" />
+
+            <TextView
+                style="@style/FieldLabel"
+                android:layout_marginTop="8dp"
+                android:text="@string/record_fps" />
+
+            <Spinner
+                android:id="@+id/fpsSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/record_fps" />
+
+            <TextView
+                style="@style/FieldLabel"
+                android:layout_marginTop="8dp"
+                android:text="@string/record_bitrate" />
+
+            <Spinner
+                android:id="@+id/bitrateSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/record_bitrates" />
+
+            <Switch
+                android:id="@+id/recordAudioSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/record_audio" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/Card">
+
+            <TextView
+                style="@style/SectionTitle"
+                android:text="@string/record_preview" />
+
+            <FrameLayout
+                android:layout_width="320dp"
+                android:layout_height="240dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:background="#FF000000">
+
+                <TextureView
+                    android:id="@+id/previewView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/previewStatusText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/record_preview_hint"
+                android:textColor="#FFB388FF"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/Card">
+
+            <TextView
+                style="@style/SectionTitle"
+                android:text="@string/record_segment" />
+
+            <Spinner
+                android:id="@+id/durationSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:entries="@array/record_durations" />
+
+            <TextView
+                style="@style/FieldLabel"
+                android:layout_marginTop="12dp"
+                android:text="@string/record_orientation" />
+
+            <Spinner
+                android:id="@+id/orientationSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/record_orientations" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/Card">
+
+            <TextView
+                style="@style/SectionTitle"
+                android:text="@string/record_save_path" />
+
+            <TextView
+                android:id="@+id/recordPathText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/record_default_path"
+                android:textColor="#FFB388FF"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/chooseRecordFolderButton"
+                    style="@style/SecondaryButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/record_choose_folder" />
+
+                <Button
+                    android:id="@+id/resetRecordFolderButton"
+                    style="@style/SecondaryButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:text="@string/record_reset_folder" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
