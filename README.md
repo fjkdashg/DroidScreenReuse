@@ -7,6 +7,33 @@ Android 桌面时钟应用：全屏时间/农历/天气显示，呼吸灯背景�
 - 支持 armeabi-v7a / arm64-v8a / x86 / x86_64
 - 调试环境：**仅真机**（当前设备 `ac5b007f`，小米 2109119BC，Android 13），不使用模拟器
 
+## 生成方式、引用与参考资料
+
+### AI 生成说明
+
+本项目由 **CodeBuddy**（AI 编程助手）辅助生成与迭代开发，使用的模型为 **Tencent Hunyuan Hy**。功能实现、代码结构与文档均在 AI 辅助下完成，并结合真机调试结果做了修正。
+
+### 开源项目与第三方脚本引用
+
+- 应用运行时**未引入任何第三方开源库或第三方脚本**，源码为纯 Java，仅依赖 Android 平台 API（上文“无第三方依赖”即指此）。
+- 构建期使用 Android Gradle Plugin 8.1.4、Gradle 8.2、JDK 17 与 Android SDK，各自的开源许可证（Apache-2.0、GPLv2+Classpath Exception 等）随工具分发；它们属于构建工具链，不作为应用源码引用。
+- `LunarCalendar` 内置的 1900–2100 年农历压缩数据表 `LUNAR_INFO` 参考了中文开发者社区广泛流传的公开农历编码表，以常量形式自包含实现；未引入第三方农历库，原始数据表作者未在本项目中记录。
+
+### 参考资料与出处
+
+| 资料 | 用途 | 出处 |
+|---|---|---|
+| Open-Meteo 免费天气 API | 当前/明日天气、温度与 `weather_code` | https://open-meteo.com/ ，接口文档 https://open-meteo.com/en/docs |
+| Open-Meteo Weather Code | `iconOf()` 晴雨 emoji 映射 | https://open-meteo.com/en/docs#weathercode |
+| Android Developers：Camera2 / ImageReader | 相机抓帧与会话管理 | https://developer.android.com/reference/android/hardware/camera2 ，https://developer.android.com/reference/android/media/ImageReader |
+| Android Developers：MediaCodec / MediaMuxer | H.264 手动编码与 MP4 封装 | https://developer.android.com/reference/android/media/MediaCodec ，https://developer.android.com/reference/android/media/MediaMuxer |
+| Android Developers：AlarmManager / 前台服务 | 闹钟调度与后台录像保活 | https://developer.android.com/reference/android/app/AlarmManager ，https://developer.android.com/guide/components/foreground-services |
+| 中国政府网《国务院办公厅关于 XXXX 年部分节假日安排的通知》 | `ChineseHoliday` 公休/调休数据（2025–2027） | 中国政府网 https://www.gov.cn/ ；2027 年数据依据“国办发明电〔2026〕10号” |
+| Unicode Emoji | 天气图标使用 Unicode 字符，无图标库 | https://unicode.org/emoji/ |
+| Android Gradle Plugin / Gradle 文档 | 构建配置 | https://developer.android.com/build ，https://gradle.org/ |
+
+> 说明：上述资料均为公开可查资料；农历编码表属于社区通用公开数据，未追溯到单一原始出处，故按“社区流传的公开数据表”注明。
+
 ## 功能总览
 
 | 模块 | 说明 |
