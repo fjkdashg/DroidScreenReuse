@@ -1,8 +1,8 @@
-# DroidScreenTimer
+# DroidScreenUse
 
 Android 桌面时钟应用：全屏时间/农历/天气显示，呼吸灯背景，支持后台摄像头持续录像（分段保存）、多闹钟（中国公休日避响）、MJPEG 局域网实时画面推流与 HTTP 调试服务器。
 
-- 包名：`com.droidscreentimer`
+- 包名：`com.droidscreentimer`（历史包名，未随显示名称变更）
 - minSdk 24 / targetSdk 34，纯 Java（无第三方依赖）
 - 支持 armeabi-v7a / arm64-v8a / x86 / x86_64
 - 调试环境：**仅真机**（当前设备 `ac5b007f`，小米 2109119BC，Android 13），不使用模拟器
@@ -66,8 +66,8 @@ Android 桌面时钟应用：全屏时间/农历/天气显示，呼吸灯背景�
 ## 构建与部署
 
 ```powershell
-$env:JAVA_HOME='X:\CodeBuddy\DroidScreenTimer\.tools\jdk-17.0.2'
-Set-Location 'X:\CodeBuddy\DroidScreenTimer'
+$env:JAVA_HOME='X:\CodeBuddy\DroidScreenUse\.tools\jdk-17.0.2'
+Set-Location 'X:\CodeBuddy\DroidScreenUse'
 & '.tools\gradle-8.2\bin\gradle.bat' --no-daemon assembleDebug
 ```
 
@@ -79,10 +79,19 @@ Set-Location 'X:\CodeBuddy\DroidScreenTimer'
 - **传输约定**：`adb push` 到真机一律使用带版本号的文件名，目标为 `/sdcard/Download/`，例如：
 
 ```powershell
-& 'E:\ADB_ToolboX\ADB\adb.exe' -s ac5b007f push 'app\build\outputs\apk\debug\app-debug.apk' '/sdcard/Download/DroidScreenTimer-v39.apk'
+& 'E:\ADB_ToolboX\ADB\adb.exe' -s ac5b007f push 'app\build\outputs\apk\debug\app-debug.apk' '/sdcard/Download/DroidScreenUse-v39.apk'
 ```
 
 - MIUI 设备 adb 安装需在手机上开启开发者选项中的「USB 安装」，否则报 `INSTALL_FAILED_USER_RESTRICTED`；也可直接在手机文件管理中点击 Download 里的 APK 手动安装
+
+### 推送即发版（GitHub Releases）
+
+`.github/workflows/release.yml` 在每次推送到 `main` 后自动执行：在云端重新构建 debug APK，读取构建后的 `VERSION_CODE`，创建或更新对应 tag `v<版本号>` 的 Release，并将 APK 以 `DroidScreenUse-v<版本号>-debug.apk` 上传（同名资产覆盖），版本说明由提交记录自动生成。
+
+- 使用仓库内置的 `GITHUB_TOKEN`（需 `contents: write`），无需额外配置密钥
+- 若同名 Release 已存在，则更新标题/说明并覆盖 APK 资产
+- 本地 `version.properties` 在云端构建时仍会自增，但不会回写仓库，因此同一版本号的重复推送会更新同一个 Release
+- GitHub Actions 需要在仓库 `Settings → Actions → General` 中处于启用状态
 
 ## HTTP 接口
 
